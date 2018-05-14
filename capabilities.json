@@ -1,0 +1,139 @@
+{
+    "sorting": {
+        "default": { }
+    },
+    "dataRoles": [
+        {
+            "displayName": "Name",
+            "name": "name",
+            "kind": "Grouping",
+            "requiredTypes": [
+                {
+                    "text": true
+                },
+                {
+                    "numeric": true
+                },
+                {
+                    "integer": true
+                }
+            ],
+            "preferredTypes": [
+                {
+                    "text": true
+                }
+            ]
+        },
+        {
+            "displayName": "Actual Value Data",
+            "name": "actualValue",
+            "kind": "Measure",
+            "requiredTypes": [
+                {
+                    "numeric": true
+                },
+                {
+                    "integer": true
+                }
+            ],
+            "preferredTypes": [
+                {
+                    "numeric": true
+                },
+                {
+                    "integer": true
+                }
+            ]
+        },
+        {
+            "displayName": "Target Value Data",
+            "name": "targetValue",
+            "kind": "Measure",
+            "requiredTypes": [
+                {
+                    "numeric": true
+                },
+                {
+                    "integer": true
+                }
+            ],
+            "preferredTypes": [
+                {
+                    "numeric": true
+                },
+                {
+                    "integer": true
+                }
+            ]
+        }
+    ],
+    "objects": {
+        "dataPoint": {
+            "displayName": "Data colors",
+            "properties": {
+                "defaultColor": {
+                    "displayName": "Default color",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "showAllDataPoints": {
+                    "displayName": "Show all",
+                    "type": {
+                        "bool": true
+                    }
+                },
+                "fill": {
+                    "displayName": "Fill",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "fillRule": {
+                    "displayName": "Color saturation",
+                    "type": {
+                        "fill": {}
+                    }
+                },
+                 "fontSize": {
+                    "displayName": "Text Size",
+                    "type": {
+                        "formatting": {
+                            "fontSize": true
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "dataViewMappings": [
+        {
+            "conditions": [
+                {
+                    "name": { "max": 1 },
+                    "actualValue": { "max": 1 },
+                    "targetValue": { "max": 1 }
+                }
+            ],
+            "categorical": {
+                "categories": {
+                    "for": { "in": "name" }
+                },
+                "values": {
+                    "select": [
+                        { "bind": { "to": "actualValue" } },
+                        { "bind": { "to": "targetValue" } }
+                    ]
+                }
+            }
+        }
+    ]
+}

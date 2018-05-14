@@ -1,0 +1,10 @@
+{
+  "name": "visual",
+  "dependencies": {
+    "@types/d3": "^5.0.0",
+    "@types/lodash": "^4.14.108",
+    "d3": "^5.4.0",
+    "lodash": "^4.17.10",
+    "powerbi-visuals-utils-dataviewutils": "1.2.0"
+  }
+}
