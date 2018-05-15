@@ -888,9 +888,7 @@ var powerbi;
                             tooltip.style("opacity", 0);
                         })
                             .on("click", function (d, i) {
-                            _this.selectionManager.select(_this.selectionIds[i]).then(function (ids) {
-                                console.log("SELECTED IDS:", ids);
-                            });
+                            _this.selectionManager.select(_this.selectionIds[i]).then(function (ids) { });
                         });
                         this.chart.selectAll(".label")
                             .data(this.dataBag)

@@ -222,9 +222,7 @@ module powerbi.extensibility.visual {
                     tooltip.style("opacity", 0);
                 })
                 .on("click", (d, i) => {
-                    this.selectionManager.select(this.selectionIds[i]).then((ids: ISelectionId[]) => {
-                        console.log("SELECTED IDS:", ids);
-                    });
+                    this.selectionManager.select(this.selectionIds[i]).then((ids: ISelectionId[]) => {});
                 });
 
             this.chart.selectAll(".label")

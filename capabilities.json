@@ -65,6 +65,27 @@
                     "integer": true
                 }
             ]
+        },
+        {
+            "displayName": "Sales Value Data",
+            "name": "salesValue",
+            "kind": "Measure",
+            "requiredTypes": [
+                {
+                    "numeric": true
+                },
+                {
+                    "integer": true
+                }
+            ],
+            "preferredTypes": [
+                {
+                    "numeric": true
+                },
+                {
+                    "integer": true
+                }
+            ]
         }
     ],
     "objects": {
@@ -120,7 +141,8 @@
                 {
                     "name": { "max": 1 },
                     "actualValue": { "max": 1 },
-                    "targetValue": { "max": 1 }
+                    "targetValue": { "max": 1 },
+                    "salesValue": { "max": 1 }
                 }
             ],
             "categorical": {
@@ -130,7 +152,8 @@
                 "values": {
                     "select": [
                         { "bind": { "to": "actualValue" } },
-                        { "bind": { "to": "targetValue" } }
+                        { "bind": { "to": "targetValue" } },
+                        { "bind": { "to": "salesValue" } }
                     ]
                 }
             }
